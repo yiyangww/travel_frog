@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 	<head>
 		<meta charset="utf-8" />
 		<meta
@@ -7,20 +7,314 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
 
-		<title>reveal.js</title>
+		<title>旅行青蛙</title>
 
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+		<link rel="stylesheet" href="dist/theme/sky.css" />
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
+		/>
+		<style>
+			.reveal .canada-overview h2 {
+				font-family: 'Noto Sans SC', 'Quicksand', sans-serif;
+				font-weight: 700;
+				letter-spacing: 0.05em;
+				margin-bottom: 0.3em;
+			}
+
+			.reveal .canada-overview p {
+				font-size: 0.75em;
+				color: #5276a5;
+				margin-bottom: 1.2em;
+			}
+
+			.reveal .canada-route {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 0.6em 1.5em;
+				font-family: 'Noto Sans SC', 'Open Sans', sans-serif;
+				font-size: 0.62em;
+				line-height: 1.7;
+				text-align: left;
+				list-style: none;
+				padding: 0;
+				margin: 0 auto;
+				max-width: 90%;
+			}
+
+			.reveal .canada-route li {
+				padding: 0.35em 0.6em;
+				background: rgba(255, 255, 255, 0.55);
+				border-radius: 0.4em;
+				border-left: 3px solid #2a76dd;
+			}
+
+			.reveal .canada-route li span {
+				color: #888;
+				font-size: 0.85em;
+				margin-left: 0.3em;
+			}
+
+			.reveal .city-slide {
+				display: grid;
+				grid-template-columns: 1fr 1.15fr;
+				gap: 2em;
+				align-items: center;
+				width: 100%;
+				text-align: left;
+				font-family: 'Noto Sans SC', 'Open Sans', sans-serif;
+			}
+
+			.reveal .city-slide--reverse .city-content {
+				order: 2;
+			}
+
+			.reveal .city-slide--reverse .city-photo {
+				order: 1;
+			}
+
+			.reveal .city-content {
+				padding: 1em 1.2em;
+				background: rgba(255, 255, 255, 0.6);
+				border-radius: 0.6em;
+				box-shadow: 0 0.15em 0.8em rgba(42, 118, 221, 0.12);
+			}
+
+			.reveal .city-name {
+				font-size: 1.15em;
+				font-weight: 700;
+				margin: 0 0 0.15em;
+				color: #2a76dd;
+				line-height: 1.3;
+			}
+
+			.reveal .city-name-en {
+				font-family: 'Quicksand', sans-serif;
+				font-weight: 400;
+				font-size: 0.65em;
+				color: #666;
+				margin-left: 0.35em;
+			}
+
+			.reveal .city-region {
+				font-size: 0.55em;
+				color: #5276a5;
+				margin: 0 0 0.8em;
+				padding-bottom: 0.6em;
+				border-bottom: 1px solid rgba(42, 118, 221, 0.2);
+			}
+
+			.reveal .city-highlights {
+				font-size: 0.58em;
+				line-height: 1.85;
+				margin: 0;
+				padding-left: 1.1em;
+				color: #444;
+			}
+
+			.reveal .city-highlights li {
+				margin-bottom: 0.25em;
+			}
+
+			.reveal .city-highlights li::marker {
+				color: #2a76dd;
+			}
+
+			.reveal .city-photo {
+				width: 100%;
+				max-height: 62vh;
+				object-fit: cover;
+				border-radius: 0.6em;
+				box-shadow: 0 0.3em 1.2em rgba(0, 0, 0, 0.18);
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<div class="r-hstack">
+						<img src="img/1.jpg" class="r-stretch" alt="" />
+						<img src="img/2.JPG" class="r-stretch" alt="" />
+					</div>
+				</section>
+				<section class="canada-overview">
+					<h2>加拿大城市之旅</h2>
+					<p>自西向东 · 太平洋 → 大西洋</p>
+					<ol class="canada-route">
+						<li>1. 维多利亚 <span>Victoria</span></li>
+						<li>2. 温哥华 <span>Vancouver</span></li>
+						<li>3. 班夫 <span>Banff</span></li>
+						<li>4. 多伦多 <span>Toronto</span></li>
+						<li>5. 蒙特利尔 <span>Montréal</span></li>
+						<li>6. 哈利法克斯 <span>Halifax</span></li>
+					</ol>
+				</section>
+
+				<section>
+					<div class="city-slide">
+						<div class="city-content">
+							<h3 class="city-name">维多利亚<span class="city-name-en">Victoria</span></h3>
+							<p class="city-region">不列颠哥伦比亚省首府 · 温哥华岛</p>
+							<ul class="city-highlights">
+								<li>英式花园城市，全年温和宜人</li>
+								<li>内港夜景与议会大厦</li>
+								<li>布查特花园 — 世界著名私家花园</li>
+								<li>观鲸、骑行、海滨漫步</li>
+							</ul>
+						</div>
+						<img src="img/cities/victoria.jpg" class="city-photo" alt="维多利亚内港" />
+					</div>
+				</section>
+
+				<section>
+					<div class="city-slide city-slide--reverse">
+						<div class="city-content">
+							<h3 class="city-name">温哥华<span class="city-name-en">Vancouver</span></h3>
+							<p class="city-region">不列颠哥伦比亚省 · 加拿大西海岸门户</p>
+							<ul class="city-highlights">
+								<li>斯坦利公园与城市天际线</li>
+								<li>格兰维尔岛市场与公共艺术</li>
+								<li>格劳斯山俯瞰全城与海湾</li>
+								<li>多元文化融合，亚洲美食天堂</li>
+							</ul>
+						</div>
+						<img src="img/cities/vancouver.jpg" class="city-photo" alt="温哥华天际线" />
+					</div>
+				</section>
+
+				<section>
+					<div class="city-slide">
+						<div class="city-content">
+							<h3 class="city-name">班夫<span class="city-name-en">Banff</span></h3>
+							<p class="city-region">艾伯塔省 · 加拿大落基山脉</p>
+							<ul class="city-highlights">
+								<li>加拿大第一座国家公园</li>
+								<li>露易丝湖、梦莲湖 — 翡翠色高山湖泊</li>
+								<li>班夫温泉与硫磺山缆车</li>
+								<li>徒步、滑雪，邂逅麋鹿与黑熊</li>
+							</ul>
+						</div>
+						<img src="img/cities/banff.jpg" class="city-photo" alt="班夫梦莲湖" />
+					</div>
+				</section>
+
+				<section>
+					<div class="city-slide city-slide--reverse">
+						<div class="city-content">
+							<h3 class="city-name">多伦多<span class="city-name-en">Toronto</span></h3>
+							<p class="city-region">安大略省 · 加拿大最大城市</p>
+							<ul class="city-highlights">
+								<li>CN 塔 — 北美标志性地标</li>
+								<li>皇家安大略博物馆与卡萨罗玛城堡</li>
+								<li>古酿酒厂区与湖滨步道</li>
+								<li>可一日游尼亚加拉大瀑布</li>
+							</ul>
+						</div>
+						<img src="img/cities/toronto.jpg" class="city-photo" alt="多伦多 CN 塔" />
+					</div>
+				</section>
+
+				<section>
+					<div class="city-slide">
+						<div class="city-content">
+							<h3 class="city-name">蒙特利尔<span class="city-name-en">Montréal</span></h3>
+							<p class="city-region">魁北克省 · 北美法式风情之都</p>
+							<ul class="city-highlights">
+								<li>老港与老蒙特利尔石板街</li>
+								<li>圣母大教堂与蒙特利尔塔</li>
+								<li>蒙特利尔国际爵士音乐节</li>
+								<li>双语文化、法餐与百吉饼</li>
+							</ul>
+						</div>
+						<img src="img/cities/montreal.jpg" class="city-photo" alt="蒙特利尔老港" />
+					</div>
+				</section>
+
+				<section>
+					<div class="city-slide city-slide--reverse">
+						<div class="city-content">
+							<h3 class="city-name">哈利法克斯<span class="city-name-en">Halifax</span></h3>
+							<p class="city-region">新斯科舍省 · 大西洋沿岸门户</p>
+							<ul class="city-highlights">
+								<li>滨海步道与活跃渔港</li>
+								<li>城堡山国家历史遗址</li>
+								<li>佩吉湾灯塔 — 经典大西洋风光</li>
+								<li>新鲜龙虾与泰坦尼克号海事历史</li>
+							</ul>
+						</div>
+						<img src="img/cities/halifax.jpg" class="city-photo" alt="哈利法克斯港口" />
+					</div>
+				</section>
+
+				<section>
+					<img
+						src="img/旅行青蛙.png"
+						alt=""
+						style="height: 3.5em; margin-bottom: 0.4em; background: transparent"
+					/>
+					<div
+						style="
+							display: grid;
+							grid-template-columns: repeat(4, 1fr);
+							gap: 0.6em 1em;
+							font-size: 0.52em;
+							text-align: left;
+							width: 100%;
+							line-height: 1.55;
+						"
+					>
+						<div>
+							<h4 style="margin: 0 0 0.25em; color: #5276a5">欧洲</h4>
+							<ul style="padding-left: 1.2em; margin: 0">
+								<li>🇩🇪 科隆</li>
+								<li>🇬🇧 伦敦</li>
+								<li>🇫🇷 巴黎</li>
+								<li>🇮🇸 雷克雅未克</li>
+								<li>🇪🇸 马德里</li>
+								<li>🇮🇹 罗马</li>
+								<li>🇬🇷 雅典</li>
+								<li>🇬🇷 伊利奥斯爱琴海</li>
+								<li>🇹🇷 伊斯坦布尔</li>
+							</ul>
+						</div>
+						<div>
+							<h4 style="margin: 0 0 0.25em; color: #5276a5">亚洲</h4>
+							<ul style="padding-left: 1.2em; margin: 0">
+								<li>🇨🇳 大好河山</li>
+								<li>🇦🇪 迪拜</li>
+								<li>🇹🇭 曼谷</li>
+								<li>🇰🇷 首尔</li>
+								<li>🇯🇵 东京</li>
+							</ul>
+						</div>
+						<div>
+							<h4 style="margin: 0 0 0.25em; color: #5276a5">美洲</h4>
+							<ul style="padding-left: 1.2em; margin: 0">
+								<li>🇺🇸 西姆斯教堂</li>
+								<li>🇺🇸 夏威夷</li>
+								<li>🇺🇸 拉斯维加斯</li>
+								<li>🇺🇸 纽约</li>
+								<li>🇺🇸 奥兰多</li>
+								<li>🇧🇷 里约热内卢</li>
+							</ul>
+						</div>
+						<div>
+							<h4 style="margin: 0 0 0.25em; color: #5276a5">非洲 · 大洋洲</h4>
+							<ul style="padding-left: 1.2em; margin: 0">
+								<li>🇪🇬 开罗</li>
+								<li>🇿🇦 开普敦</li>
+								<li>🇦🇺 悉尼</li>
+								<li>🇦🇺 墨尔本</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 
